@@ -9,6 +9,6 @@ RUN INSTALL_PKGS="docker" && \
 RUN systemctl enable docker
 
 RUN groupadd docker
-RUN usermod -aG docker jenkins
 
 USER 1001
+RUN usermod -aG docker $USER
