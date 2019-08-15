@@ -7,8 +7,6 @@ RUN INSTALL_PKGS="docker" && \
     yum clean all -y
 
 RUN systemctl enable docker
-
 RUN groupadd docker
 
 USER 1001
-RUN usermod -aG docker $USER
