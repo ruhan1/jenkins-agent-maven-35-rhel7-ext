@@ -4,5 +4,5 @@ FROM quay.io/openshift/origin-jenkins-agent-maven
 USER root
 
 RUN INSTALL_PKGS="docker" && \
-    yum install -y $INSTALL_PKGS && \
+    yum install -y $INSTALL_PKGS --disablerepo=rhel-fast-datapath && \
     yum clean all -y
