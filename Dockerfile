@@ -6,4 +6,9 @@ RUN INSTALL_PKGS="docker" && \
     yum install -y $INSTALL_PKGS && \
     yum clean all -y
 
+RUN systemctl enable docker
+
+RUN groupadd docker
+RUN usermod -aG docker jenkins
+
 USER 1001
