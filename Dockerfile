@@ -1,4 +1,4 @@
-FROM quay.io/openshift/origin-jenkins-agent-maven
+FROM openshift/jenkins-agent-maven-35-centos7
 
 USER root
 
